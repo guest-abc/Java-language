@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class calculator {
+    public static void main(String[] args) {
+        System.out.println("Write two numbers to do a numerical operation.");
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Write a number: ");
+        int number1 = Integer.parseInt(sc.nextLine());
+        System.out.print("Write another number: ");
+        int number2 = Integer.parseInt(sc.nextLine());
+
+        System.out.print("Enter 1 to add. 2 to subtract. 3 to multiplier. And 4 to division: ");
+        int oper = Integer.parseInt(sc.nextLine());
+
+        int result = 0;
+
+        if (oper == 1) {
+            result = number1 + number2;
+        } else if (oper == 2) {
+            result = number1 - number2;
+        } else if (oper == 3) {
+            result = number1 * number2;
+        } else if (oper ==4){
+            result = number1 / number2;
+        } else {
+            System.out.println("Invalid operation.");
+            sc.close();
+            return;
+        }
+
+        System.out.println("The result is: " + result);
+        sc.close();
+    }
+}
